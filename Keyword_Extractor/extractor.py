@@ -124,7 +124,7 @@ def getKeyword(text, model, num = 10):
         return keyphrase
 
     def keYake(num):
-        max_ngram_size = 3
+        max_ngram_size = 2
         custom_kwextractor = yake.KeywordExtractor(lan="en", n = max_ngram_size, dedupLim=0.9, dedupFunc='seqm', windowsSize=1, top=num, features=None)
         keyphrases = custom_kwextractor.extract_keywords(text)
 
